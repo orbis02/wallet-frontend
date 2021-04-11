@@ -42,23 +42,23 @@
                 <div class="collapse navbar-collapse" id="example" >
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">
-                            <i class="fa fa-facebook-square"></i>
+                            <a href="{{Host}}Login">
+                            <i class="fa fa-sign-in"></i>
                             Login
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                            <i class="fa fa-twitter"></i>
-                            Tweet
+                            <i class="fa fa-user"></i>
+                            Registrate
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
                             <i class="fa fa-pinterest"></i>
                             Pin
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -75,20 +75,20 @@
                         </div>
                         <div class="col-md-5">
                             <div class="description text-center">
-                                <h2>Quienes somos?</h2>
+                                <h2>¿Quiénes somos?</h2>
                                 <br>
                                 <h5>Somos una empresa diseñada para dar soporte financiero personalizado de forma cercana y diaria a nuestros clientes, dando respuesta a las necesidades específicas del adulto joven, ya que es la fusión perfecta entre un asistente personal y un asesor financiero.</h5>
                                 <div class="buttons">
-                                    <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-fill btn-neutral">
+                                    <!-- <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-fill btn-neutral">
                                     <i class="fa fa-download"></i> Download
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section section-gray section-clients">
+            <!-- <div class="section section-gray section-clients">
                 <div class="container text-center">
                     <h4 class="header-text">Happy Customers</h4>
                     <p>
@@ -105,7 +105,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="section section-presentation">
                 <div class="container">
                     <div class="row">
@@ -113,12 +113,12 @@
                             <div class="description">
                                 <h4 class="header-text">AFIP APP</h4>
                                 <p>AFIP es una app que a la hora de realizar tus pagos serán con total seguridad y flexibilidad. Te ayudará a administrar día a día tus finanzas personales. </p>
-                                <p>Que ofrecemos?
+                                <p>¿Qué ofrecemos?
                                 <p>
                                 <ol>
                                     <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;">Los pagos que se pueden realizar con total facilidad.</li>
                                     <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;">Informes financieros sobre cuentas, tarjetas, etc.</li>
-                                    <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;" >Administración de tus finanzas personales</li>
+                                    <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;" >Administración de tus finanzas personales.</li>
                                 </ol>
                             </div>
                         </div>
@@ -137,25 +137,26 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-md-offset-1">
-                            <h4 class="header-text">Beautiful colors</h4>
-                            <p>
-                                Each color has a strong pigment and was chosen to make your design shine. Each component from our product can have one of these colors. Try on different combinations and be sure that everything works together.
-                            </p>
-                            <p>
-                                PSD Custom focuses on conveying the attention of your users to the important parts of the page and the actions. While keeping a light feel, the colors give the page an extra push.
-                            </p>
+                            <h4 class="header-text">Beneficios que obtendrás </h4>
+                            <ol>
+                                    <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;">Los pagos de mora se eliminan de forma total,pues el ejecutivo estará a cargo de velar por los pagos a tiempo de cada una de esas actividades financieras que les fueron delegadas.</li>
+                                    <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;">Mayor tiempo para dedicar a otras actividades como amigos y familias.</li>
+                                    <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;" >Optimzación del horario laboral,pues solo tendria que enfocarse en su trabajo pues lo demás ya lo hace AFIP</li>
+                                    <li style="font-size: 18px;font-family: Helvetica Neue,Open Sans,Arial,sans-serif;" >Eliminación de la preocupación por tener que organizar una agenda apretada en base a las filas de bancoso o viajes a cajeros.</li>
+                                </ol>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-md-5">
-                            <h4 class="header-text">Pixel Perfect</h4>
+                            <h4 class="header-text">¿Como afiliarte </h4>
+                            <h4 class="header-text"> con nosotros?</h4>
                             <p>
-                                Each color has a strong pigment and was chosen to make your design shine. Each component from our product can have one of these colors. Try on different combinations and be sure that everything works together.
+                               Selecciona un plan que se adapte tus necesidades, usando una de las siguientes modalidades: Mensual o Anual fija.
                             </p>
-                            <p>
+                            <!-- <p>
                                 PSD Custom focuses on conveying the attention of your users to the important parts of the page and the actions. While keeping a light feel, the colors give the page an extra push.
-                            </p>
+                            </p> -->
                         </div>
                         <div class="col-md-6 col-md-offset-1">
                             <div class="demo-image">
@@ -176,7 +177,8 @@
                                     <i class="pe-7s-piggy"></i>
                                 </div>
                                 <h4>Afiliado Nivel 1</h4>
-                                <p>Podra hacer uso de todos nuestros servicios</p>
+                                <p>Podrá hacer uso de todos nuestros servicios</p>
+                                <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-success btn-lg btn-fill">Empezar ahora</a>
                             </div>
                         </div>
                                     <div class="col-md-4">
@@ -185,7 +187,8 @@
                                     <i class="pe-7s-piggy"></i>
                                 </div>
                                 <h4>Afiliado Nivel 2</h4>
-                                <p>Podra hacer uso de un 70% de nuestros servicios</p>
+                                <p>Podrá hacer uso de un 70% de nuestros servicios</p>
+                                <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-success btn-lg btn-fill">Empezar ahora</a>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -194,19 +197,21 @@
                                     <i class="pe-7s-piggy"></i>
                                 </div>
                                 <h4>Afiliado Nivel 3</h4>
-                                <p>Podra hacer uso de un 70% de nuestros servicios</p>
+                                <p>Podrá hacer uso de un 70% de nuestros servicios</p>
+                                <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-success btn-lg btn-fill">Empezar ahora</a>
                             </div>
+                            
                         </div>
                     
                     </div>
                 </div>
             </div>
-            <div class="section section-testimonial">
+            <!-- <div class="section section-testimonial">
                 <div class="container">
                     <h4 class="header-text text-center">What people think</h4>
-                    <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
+                    <div id="carousel-example-generic" class="carousel fade" data-ride="carousel"> -->
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
+                        <!-- <div class="carousel-inner" role="listbox">
                             <div class="item">
                                 <div class="mask">§
                                     <img src="{{Host}}public/landing/assets/img/faces/face-4.jpg">
@@ -241,17 +246,17 @@
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                         </ol>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
             <div class="section section-no-padding">
                 <div class="parallax filter-gradient blue" data-color="blue">
                     <div class="parallax-background">
                         <img class ="parallax-background-image" src="{{Host}}public/landing/assets/img/showcases/showcase-2/bg2.jpg">
                     </div>
                     <div class="info">
-                        <h1>Download this landing page for free!</h1>
-                        <p>Beautiful multipurpose bootstrap landing page.</p>
-                        <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-neutral btn-lg btn-fill">DOWNLOAD</a>
+                        <h1>AFIP</h1>
+                        <p>ASISTENTE FINANCIERO PERSONAL</p>
+                        <!-- <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-neutral btn-lg btn-fill">DOWNLOAD</a> -->
                     </div>
                 </div>
             </div>
@@ -261,15 +266,15 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                Home
+                                INICIO
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                Company
+                                AFIP
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                 Portfolio
                                 </a>
@@ -278,7 +283,7 @@
                                 <a href="#">
                                 Blog
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
                     <div class="social-area pull-right">
@@ -293,7 +298,7 @@
                         </a>
                     </div>
                     <div class="copyright">
-                        &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love
+                        &copy; 2021 <a href="http://www.creative-tim.com">AFIP</a>
                     </div>
                 </div>
             </footer>

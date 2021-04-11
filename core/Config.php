@@ -5,7 +5,7 @@
  */
 
 if (DEV_MODE == TRUE)
-    $host = 'http://localhost:8080/Wallet/';
+    $host = 'http://localhost:8080/wallet/';
 else 
     $host = '';
 

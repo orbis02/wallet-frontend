@@ -7,7 +7,7 @@ use App\Models\User;
 
 
 
-class Index extends Controller {
+class Login extends Controller {
 
 	function __construct(){
 
