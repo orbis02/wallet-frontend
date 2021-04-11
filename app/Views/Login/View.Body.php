@@ -37,7 +37,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
-                    <form class="form" method="POST" action="{{Host}}Index/Login">
+                    <form class="form" method="POST" action="{{Host}}Login/Login">
                         <div class="card card-login card-hidden">
                             <div class="card-header card-header-rose text-center">
                                 <h4 class="card-title">Login</h4>
