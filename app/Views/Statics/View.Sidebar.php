@@ -49,14 +49,14 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="nav-item active ">
+                <li class="nav-item">
                     <a class="nav-link" href="../examples/dashboard.html">
                         <i class="material-icons">dashboard</i>
                         <p> Inicio </p>
                     </a>
                 </li>
 
-                <li class="nav-item ">
+                <li class="nav-item active">
                     <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
                         <i class="material-icons">timeline</i>
                         <p> Estadisticas
