@@ -316,7 +316,55 @@
                 dataType: 'json',
                 success:function(data){
                     console.log(data);
-                }error:function (err){
+
+                    Highcharts.chart('StaticChart', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: data[1]
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        accessibility: {
+                            point: {
+                                valueSuffix: '%'
+                            }
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: false
+                                },
+                                showInLegend: true
+                            }
+                        },
+                        series: [{
+                            name: 'Brands',
+                            colorByPoint: true,
+                            data: data[0]
+                        }]
+                    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+                },error:function (err){
                     console.log(err);
                 }
             });

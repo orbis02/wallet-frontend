@@ -91,16 +91,32 @@
                                 <form id="staticForm" method="post" action="{{Host}}">
                                     <label class="bmd-label-floating">Desde</label>
                                     <div class="form-group">
-                                        <input type="text" class="form-control datepicker" name="from" value="">
+                                        <input type="text" class="form-control datepicker" name="from" value="{{Today}}">
                                     </div>
                                     <label class="bmd-label-floating">Hasta</label>
                                     <div class="form-group">
-                                        <input type="text" class="form-control datepicker" name="to"  value="">
+                                        <input type="text" class="form-control datepicker" name="to"  value="{{Today}}">
                                     </div>
                                 </form>
                             </div>
                             <div class="card-footer ">
                                 <button type="submit" id="generateReport" class="btn btn-fill btn-rose">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card card-chart">
+                            <div class="card-header card-header-default" data-header-animation="false">
+                                <div id="StaticChart"></div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="stats">
+                                    <!--<i class="material-icons">access_time</i> actualizado en los ultimos 4 minutos-->
+                                </div>
                             </div>
                         </div>
                     </div>
