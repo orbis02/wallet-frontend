@@ -79,65 +79,35 @@
             <div class="container-fluid">
 
                 <div class="row">
-
-
-                    {{AccountInformation}}
-
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="card card-chart">
-                            <div class="card-header card-header-default" data-header-animation="false">
-                                <div id="billViewsChart"></div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Gastos Por Categoria</h4>
-                                <p class="card-category">Este Mes</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <!--<i class="material-icons">access_time</i> actualizado en los ultimos 4 minutos-->
+                    <div class="col-md-6">
+                        <div class="card ">
+                            <div class="card-header card-header-rose card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">$</i>
                                 </div>
+                                <h4 class="card-title"></h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-chart">
-                            <div class="card-header card-header-default" data-header-animation="false">
-                                <div id="billperacountViewsChart"></div>
+                            <div class="card-body ">
+                                <form id="staticForm" method="post" action="{{Host}}">
+                                    <label class="bmd-label-floating">Desde</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control datepicker" name="from" value="">
+                                    </div>
+                                    <label class="bmd-label-floating">Hasta</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control datepicker" name="to"  value="">
+                                    </div>
+                                </form>
                             </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Gastos Por Cuentas</h4>
-                                <p class="card-category">
-                                    <span class="text-success"></span> Este mes</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <!--<i class="material-icons">access_time</i> actualizado en los ultimos 4 minutos-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-chart">
-                            <div class="card-header card-header-default" data-header-animation="false">
-                                <div id="IncomepercategoriesChar"></div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Ingresos Por Categorias</h4>
-                                <p class="card-category">Este mes</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <!--<i class="material-icons">access_time</i> actualizado en los ultimos 4 minutos-->
-                                </div>
+                            <div class="card-footer ">
+                                <button type="submit" id="generateReport" class="btn btn-fill btn-rose">Enviar</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
 

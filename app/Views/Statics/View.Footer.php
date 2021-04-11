@@ -246,10 +246,10 @@
 
       let wizardTab = 0;
       // Initialise the wizard
+
+      md.initFormExtendedDatetimepickers();
       demo.initMaterialWizard()     
-      getbillsperMonth();
-      getbillsperMonthperAcount();
-      getIncomeperCategiries();
+
       setTimeout(function() {
         $('.card.card-wizard').addClass('active');
       }, 600);
@@ -262,7 +262,7 @@
 
         $(".addFund").on('click',function (){
             $('#noticeModal').modal({backdrop: 'static'});
-             $('#noticeModal').modal('show');
+            $('#noticeModal').modal('show');
         });
 
 
@@ -286,7 +286,6 @@
                             operation   :'-' };
            }
 
-
           console.log(wizardTab);
             $.ajax({
                 type:"POST",
@@ -302,214 +301,33 @@
         });
 
 
-        // Javascript method's body can be found in assets/js/demos.js
-        md.initDashboardPageCharts();
-        md.initVectorMap();
+        $("#generateReport").on('click',function (){
 
-    });
-
-    const getbillsperMonth=async()=>{
-
-
-        Highcharts.theme = {
-                            colors: ['#058DC7',
-                                     '#50B432',
-                                     '#ED561B',
-                                     '#DDDF00',
-                                     '#24CBE5',
-                                     '#64E572',
-                                     '#FF9655',
-                                     '#FFF263',
-                                     '#6AF9C4'],
-                            chart: {
-                                backgroundColor: {
-                                    linearGradient: [500, 0, 500, 500],
-                                    stops: [
-                                        [0, 'rgba(255, 99, 71, 0)'],
-                                        [1, 'rgba(255, 99, 71, 0)']
-                                    ]
-                                },
-                            },
-                            title: {
-                                style: {
-                                    color: '#000000',
-                                    font: 'bold 16px "Roboto", Arial, sans-serif'
-                                }
-                            },
-                            subtitle: {
-                                style: {
-                                    color: '#000000',
-                                    font: 'bold 12px "Roboto", Arial, sans-serif'
-                                }
-                            },
-                            legend: {
-                                itemStyle: {
-                                    font: '12pt Roboto, Arial, sans-serif',
-                                    color: '#000000'
-                                },
-                                itemHoverStyle:{
-                                    color: '#000000'
-                                }
-                            }
-                        };
-                        // Apply the theme
-                        Highcharts.setOptions(Highcharts.theme);
-
-
-      $.ajax({
+            let form =  $('#staticForm').serializeArray();
+            let url  = window.location.href;
+            console.log(url)
+            $.ajax({
                 type:"POST",
-                url:"{{Host}}Dashboard/getbillsperMonth",
+                url: '{{Host}}Statics/getStatics',
+                data:{
+                        url : url,
+                        data : form
+                     },
                 dataType: 'json',
-                async: false,
                 success:function(data){
-                  
-                    // Build the chart
-                    Highcharts.chart('billViewsChart', {
-                        chart: {
-                            plotBackgroundColor: null,
-                            plotBorderWidth: null,
-                            plotShadow: false,
-                            type: 'pie'
-                        },
-                        title: {
-                            text: ''
-                        },
-                        tooltip: {
-                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                        },
-                        accessibility: {
-                            point: {
-                                valueSuffix: '%'
-                            }
-                        },
-                        plotOptions: {
-                            pie: {
-                                allowPointSelect: true,
-                                cursor: 'pointer',
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                showInLegend: true
-                            }
-                        },
-                        series: [{
-                            name: 'Brands',
-                            colorByPoint: true,
-                            data: data
-                        }]
-                    });
+                    console.log(data);
+                }error:function (err){
+                    console.log(err);
                 }
             });
 
+        });
 
-   
-    }
 
-const getbillsperMonthperAcount=async()=>{
-
-    $.ajax({
-                type:"POST",
-                url:"{{Host}}Dashboard/getbillsperMonthperAcount",
-                dataType: 'json',
-                async: false,
-                success:function(data){
-                  
-                     // Build the chart
-    Highcharts.chart('billperacountViewsChart', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: ''
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        accessibility: {
-            point: {
-                valueSuffix: '%'
-            }
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
-                },
-                showInLegend: true
-            }
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: data
-        }]
     });
-                }
-            });
 
 
-}
 
-const getIncomeperCategiries=async()=>{
-    $.ajax({
-                type:"POST",
-                url:"{{Host}}Dashboard/getIncomeperCategiries",
-                dataType: 'json',
-                async: false,
-                success:function(data){
-                   console.log(data[0].name);
-                   let categories=[];
-                   let series =[];
-                   for (i = 0; i <data.length; i++) {
-                        categories.push(data[i].name);
-                        series.push({"name":data[i].name,"data":[data[i].data]})
-                       }
-                   Highcharts.chart('IncomepercategoriesChar', {
-                                chart: {
-                                    type: 'column'
-                                },
-                                title: {
-                                    text: ''
-                                },
-                                subtitle: {
-                                    text: ''
-                                },
-                                xAxis: {
-                                    categories:categories,
-                                    crosshair: true
-                                },
-                                yAxis: {
-                                    min: 0,
-                                    title: {
-                                        text: 'Monto ($)'
-                                    }
-                                },
-                                tooltip: {
-                                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                                        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-                                    footerFormat: '</table>',
-                                    shared: true,
-                                    useHTML: true
-                                },
-                                plotOptions: {
-                                    column: {
-                                        pointPadding: 0.2,
-                                        borderWidth: 0
-                                    }
-                                },
-                                series: series
-                            });
-
-                                }
-                            });
-
-}
 
 </script>
 </body>
